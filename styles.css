@@ -34,3 +34,7 @@ main{
     height: 80vh;
     background-color: dodgerblue;
 }
+.links{
+    display: flex;
+    flex-direction: row;
+}
