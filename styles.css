@@ -3,8 +3,9 @@
     padding: 0;
 }
 header{
-    background-color: rgb(32, 32, 133);
-    width: 100%;
+    background-color: rgb(35, 35, 65);
+    z-index: 10;
+    height: 100px;
 }
 .title{
     text-align: center;
