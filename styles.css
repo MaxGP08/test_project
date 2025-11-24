@@ -1,4 +1,17 @@
 *{
     margin: 0;
     padding: 0;
+    background-color: radial-gradient(circle, #7f4cb9, #90f0e8); ;
 }
+.logo_and_slogan{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    top: 50px;
+    color: cornflowerblue
+};
+.logo_and_slogan h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: blanchedalmond
+
+};
