@@ -1,14 +1,10 @@
 *{
     margin: 0;
     padding: 0;
-    background-color: chartreuse;
 }
 header{
-    background-color: rgb(48, 48, 87);
+    background-color: rgb(32, 32, 133);
     width: 100%;
-}
-.head{
-
 }
 .title{
     text-align: center;
@@ -22,14 +18,15 @@ header{
 .logo_and_slogan h2{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: blanchedalmond
-
-};
+}
 main{
+    margin-top: 10px;
     display: flex;
     justify-content: center;
+    align-items: center; /* добавляет вертикальное выравнивание */
 }
 .main_container{
     width: 70%;
-    height: 100%;
+    height: 80vh;
     background-color: dodgerblue;
 }
