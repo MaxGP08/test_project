@@ -31,10 +31,6 @@ main{
 }
 .main_container{
     width: 70%;
-    height: 80vh;
+    height: 100vh;
     background-color: dodgerblue;
-}
-.links{
-    display: flex;
-    flex-direction: row;
 }
