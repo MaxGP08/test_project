@@ -1,10 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: chartreuse;
+}
+header{
+    background-color: rgb(48, 48, 87);
+    width: 100%;
+}
+.head{
+
+}
 .title{
-    text-align: center
+    text-align: center;
+    color: white;
+    margin: 0;
 }
 .bt{
     display: flex;
-    top: 50px;
-    color: cornflowerblue
+    margin-right:0;
 };
 .logo_and_slogan h2{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
