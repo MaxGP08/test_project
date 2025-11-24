@@ -7,6 +7,9 @@ header{
     z-index: 10;
     height: 100px;
 }
+body{
+    background-color: rgb(69, 81, 114);
+}
 .title{
     text-align: center;
     color: white;
