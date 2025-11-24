@@ -34,10 +34,13 @@ main{
     height: 100vh;
     background-color: dodgerblue;
 }
-.links{
+.links ul{
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    text-decoration: none;
 }
+
 .game_box {
     width: 300px;
     background: white;
