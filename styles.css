@@ -1,14 +1,14 @@
 *{
     margin: 0;
     padding: 0;
-    background-color: chartreuse;
 }
 header{
-    background-color: rgb(48, 48, 87);
-    width: 100%;
+    background-color: rgb(35, 35, 65);
+    z-index: 10;
+    height: 100px;
 }
-.head{
-
+body{
+    background-color: rgb(69, 81, 114);
 }
 .title{
     text-align: center;
