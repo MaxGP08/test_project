@@ -3,5 +3,11 @@
 }
 .bt{
     display: flex;
-    
-}
+    top: 50px;
+    color: cornflowerblue
+};
+.logo_and_slogan h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: blanchedalmond
+
+};
