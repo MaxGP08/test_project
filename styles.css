@@ -34,6 +34,10 @@ main{
     height: 100vh;
     background-color: dodgerblue;
 }
+.links{
+    display: flex;
+    flex-direction: row;
+}
 .game_box {
     width: 300px;
     background: white;
