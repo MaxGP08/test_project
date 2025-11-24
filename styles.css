@@ -15,3 +15,12 @@
     color: blanchedalmond
 
 };
+main{
+    display: flex;
+    justify-content: center;
+}
+.main_container{
+    width: 70%;
+    height: fit-content;
+    background-color: dodgerblue;
+}
