@@ -12,6 +12,9 @@ header{
 #st{
     padding-top: 35px;
 }
+#BF{
+    width: 100%;
+}
 body{
     background-color: rgb(69, 81, 114);
 }
@@ -51,8 +54,8 @@ main{
 }
 .main_container{
     width: 70%;
-    height: 100vh;
-    background-color: dodgerblue;
+    height: auto;
+    background-color: rgb(105, 140, 175);
     border-radius: 20px;
 
 }
