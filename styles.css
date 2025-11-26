@@ -5,7 +5,12 @@
 header{
     background-color: rgb(35, 35, 65);
     z-index: 10;
-    height: 100px;
+    height: 120px;
+    position: relative;
+    width: 100%;
+}
+#st{
+    padding-top: 35px;
 }
 body{
     background-color: rgb(69, 81, 114);
@@ -18,25 +23,24 @@ body{
 .bt{
     display: flex;
     margin-right:0;
-};
-.logo_and_slogan h2{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: blanchedalmond
 }
 main{
-    margin-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center; /* добавляет вертикальное выравнивание */
 }
 .main_container{
     width: 70%;
-    height: 100vh;
-    background-color: dodgerblue;
+    height: auto;
+    background-color: rgb(83, 114, 146);
 }
-.links{
+#BF{
+    width: 100%;
+}
+.links ul{
     display: flex;
     flex-direction: row;
+    padding: 10px;  
 }
 .game_box {
     width: 300px;
