@@ -12,6 +12,10 @@ header{
 #st{
     padding-top: 35px;
 }
+.head{
+    display: flex;
+    justify-content: space-between;
+}
 #BF{
     width: 90%;
     border-radius: 50px;
@@ -23,11 +27,12 @@ body{
 .title{
     text-align: center;
     color: white;
-    margin: 0;
+    margin-left: 50%;
 }
 .bt{
     display: flex;
-    margin-right:0;
+    margin-right:30px;
+    margin-top: 15px;
     
 }
 .links_btn{
