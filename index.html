@@ -12,7 +12,7 @@
             <div class="title">
                 <h1 id="st">Steam</h1>
             </div>
-            <div class="bt">
+            <div class="bt" id="btn-sign">
                 <button>Войти</button>
             </div>
             <div id="cart-modal" class="cart-modal">
@@ -198,11 +198,14 @@ function updateCart() {
 // Показать/скрыть корзину
 function toggleCart() {
     const modal = document.getElementById('cart-modal');
+    const btn = document.getElementById('btn-sign');
     modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
 }
 
 function closeCart() {
     document.getElementById('cart-modal').style.display = 'none';
+    const btn = document.getElementById('btn-sign');
+
 }
 
 // Очистка корзины
@@ -234,18 +237,7 @@ function showNotification(message) {
     }, 2000);
 }
 
-// Сохранение корзины в LocalStorage (дополнительно)
-function saveCart() {
-    localStorage.setItem('cart', JSON.stringify(cart));
-}
 
-function loadCart() {
-    const savedCart = localStorage.getItem('cart');
-    if (savedCart) {
-        cart = JSON.parse(savedCart);
-        updateCart();
-    }
-}
 
 // Загружаем корзину при загрузке страницы
 document.addEventListener('DOMContentLoaded', loadCart);
