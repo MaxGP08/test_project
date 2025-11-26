@@ -5,7 +5,12 @@
 header{
     background-color: rgb(35, 35, 65);
     z-index: 10;
-    height: 100px;
+    height: 120px;
+    position: relative;
+    width: 100%;
+}
+#st{
+    padding-top: 35px;
 }
 body{
     background-color: rgb(69, 81, 114);
@@ -18,10 +23,6 @@ body{
 .bt{
     display: flex;
     margin-right:0;
-};
-.logo_and_slogan h2{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: blanchedalmond
     
 }
 .links_btn{
@@ -44,7 +45,6 @@ body{
     background-color: #6459c273;
 }
 main{
-    margin-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center; /* добавляет вертикальное выравнивание */
@@ -54,8 +54,11 @@ main{
     height: 100vh;
     background-color: dodgerblue;
     border-radius: 20px;
+
 }
 .links{
+    display: flex;
+    flex-direction: row;
     margin-left: 50px;
 }
 .links ul{
