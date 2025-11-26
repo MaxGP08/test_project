@@ -23,6 +23,25 @@ body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: blanchedalmond
 }
+.links_btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;    
+}
+.bt button{
+    margin-right: 40px;
+    width: 90px;
+    border-radius: 20%;
+    border: 0;
+    background-color:#2d2481;
+    font-size: medium;
+    transition: transform(0.5s) ease;
+    color: aliceblue;
+}
+.bt button:hover{
+    transform: scale(1.1);
+    background-color: #6459c273;
+}
 main{
     margin-top: 10px;
     display: flex;
@@ -33,14 +52,32 @@ main{
     width: 70%;
     height: 100vh;
     background-color: dodgerblue;
+    border-radius: 20px;
+}
+.links{
+    margin-left: 50px;
 }
 .links ul{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    text-decoration: none;
+    justify-content:flex-start;
+    list-style: none;
+    padding: 10px;
 }
-
+.links ul li{
+    margin-right: 60px;
+}
+.links ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: transform 0.3s;
+    display: inline-block;
+}
+.links ul li a:hover{
+    color: orange;
+    transform: scale(1.1);  
+}
 .game_box {
     width: 300px;
     background: white;
@@ -48,11 +85,11 @@ main{
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     overflow: hidden;
     font-family: Arial, sans-serif;
-    transition: transform 0.3s ease;
+    transition: transform(0.5s);
 }
 
 .game_box:hover {
-    transform: translateY(-5px);
+    transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
