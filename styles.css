@@ -135,8 +135,14 @@ main{
 .game_price {
     font-size: 18px;
     font-weight: bold;
-    color: #2c5aa0;
+    color: #1f7ce7;
     margin-bottom: 15px;
+}
+.game_price p {
+    color: rgb(35, 182, 59);
+}
+.game_price h1 {
+    color: rgb(35, 182, 59);
 }
 
 .buy_btn {
