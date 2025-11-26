@@ -15,6 +15,18 @@
             <div class="bt">
                 <button>Войти</button>
             </div>
+            <div id="cart-modal" class="cart-modal">
+                <div class="cart-icon" onclick="toggleCart()">
+            🛒      <span id="cart-count">0</span>
+                </div>
+                <div class="cart-content">
+                    <h3>Корзина</h3>
+                    <div id="cart-items"></div>
+                    <div class="cart-total">Итого: $<span id="total-price">0</span></div>
+                    <button onclick="closeCart()">Закрыть</button>
+                    <button onclick="clearCart()">Очистить корзину</button>
+                </div>
+            </div>
         </div>    
         <div class="links_btn">
             <div class="links">
@@ -33,95 +45,122 @@
            <div class="games_container">
                 <div class="game_box">
                     <div class="game_image">
-                        <img src="https://via.placeholder.com/300x200/ff6b6b/white" alt="The Witcher 3">
+                        <img src="https://via.placeholder.com/300x200" alt="Cyberpunk 2077">
                     </div>
                     <div class="game_content">
-                        <h3 class="game_title">The Witcher 3</h3>
-                        <p class="game_description">Отмеченная наградами RPG в фэнтезийном мире.</p>
-                        <div class="game_price">$19.99</div>
-                        <button class="buy_btn">Купить сейчас</button>
-                    </div>
-                </div>
-                <div class="game_box">
-                    <div class="game_image">
-                        <img src="https://via.placeholder.com/300x200/51cf66/white" alt="Minecraft">
-                    </div>
-                    <div class="game_content">
-                        <h3 class="game_title">Minecraft</h3>
-                        <p class="game_description">Стройте, исследуйте и выживайте в бесконечном мире.</p>
-                        <div class="game_price">$26.95</div>
-                        <button class="buy_btn">Купить сейчас</button>
-                    </div>
-                </div>
-                <div class="game_box">
-                    <div class="game_image">
-                        <img src="https://via.placeholder.com/300x200/51cf66/white" alt="Minecraft">
-                    </div>
-                    <div class="game_content">
-                        <h3 class="game_title">Minecraft</h3>
-                        <p class="game_description">Стройте, исследуйте и выживайте в бесконечном мире.</p>
-                        <div class="game_price">$26.95</div>
-                        <button class="buy_btn">Купить сейчас</button>
-                    </div>
-                </div>
-                <div class="game_box">
-                    <div class="game_image">
-                        <img src="https://via.placeholder.com/300x200/51cf66/white" alt="Minecraft">
-                    </div>
-                    <div class="game_content">
-                        <h3 class="game_title">Minecraft</h3>
-                        <p class="game_description">Стройте, исследуйте и выживайте в бесконечном мире.</p>
-                        <div class="game_price">$26.95</div>
-                        <button class="buy_btn">Купить сейчас</button>
-                    </div>
-                </div>
-                <div class="game_box">
-                    <div class="game_image">
-                        <img src="https://via.placeholder.com/300x200/51cf66/white" alt="Minecraft">
-                    </div>
-                    <div class="game_content">
-                        <h3 class="game_title">Minecraft</h3>
-                        <p class="game_description">Стройте, исследуйте и выживайте в бесконечном мире.</p>
-                        <div class="game_price">$26.95</div>
-                        <button class="buy_btn">Купить сейчас</button>
-                    </div>
-                </div>
-                <div class="game_box">
-                    <div class="game_image">
-                        <img src="https://via.placeholder.com/300x200/51cf66/white" alt="Minecraft">
-                    </div>
-                    <div class="game_content">
-                        <h3 class="game_title">Minecraft</h3>
-                        <p class="game_description">Стройте, исследуйте и выживайте в бесконечном мире.</p>
-                        <div class="game_price">$26.95</div>
-                        <button class="buy_btn">Купить сейчас</button>
-                    </div>
-                </div>
-                <div class="game_box">
-                    <div class="game_image">
-                        <img src="https://via.placeholder.com/300x200/51cf66/white" alt="Minecraft">
-                    </div>
-                    <div class="game_content">
-                        <h3 class="game_title">Minecraft</h3>
-                        <p class="game_description">Стройте, исследуйте и выживайте в бесконечном мире.</p>
-                        <div class="game_price">$26.95</div>
-                        <button class="buy_btn">Купить сейчас</button>
-                    </div>
-                </div>
-                <div class="game_box">
-                    <div class="game_image">
-                        <img src="https://via.placeholder.com/300x200/51cf66/white" alt="Minecraft">
-                    </div>
-                    <div class="game_content">
-                        <h3 class="game_title">Minecraft</h3>
-                        <p class="game_description">Стройте, исследуйте и выживайте в бесконечном мире.</p>
-                        <div class="game_price">$26.95</div>
-                        <button class="buy_btn">Купить сейчас</button>
+                        <h3 class="game_title">Cyberpunk 2077</h3>
+                        <p class="game_description">Описание игры</p>
+                        <div class="game_price">$29.99</div>
+                        <button class="buy_btn" onclick="addToCart('Cyberpunk 2077', 29.99)">
+                            Добавить в корзину
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
 
     </main>
+    <script>
+        let cart = [];
+
+// Добавление в корзину
+function addToCart(name, price) {
+    const existingItem = cart.find(item => item.name === name);
+    
+    if (existingItem) {
+        existingItem.quantity += 1;
+    } else {
+        cart.push({
+            name: name,
+            price: price,
+            quantity: 1
+        });
+    }
+    
+    updateCart();
+    showNotification(`${name} добавлен в корзину!`);
+}
+
+// Обновление отображения корзины
+function updateCart() {
+    const cartCount = document.getElementById('cart-count');
+    const cartItems = document.getElementById('cart-items');
+    const totalPrice = document.getElementById('total-price');
+    
+    // Обновляем счетчик
+    cartCount.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
+    
+    // Обновляем список товаров
+    cartItems.innerHTML = '';
+    cart.forEach(item => {
+        const itemElement = document.createElement('div');
+        itemElement.className = 'cart-item';
+        itemElement.innerHTML = `
+            <span>${item.name}</span>
+            <span>${item.quantity} x $${item.price}</span>
+        `;
+        cartItems.appendChild(itemElement);
+    });
+    
+    // Обновляем общую сумму
+    const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    totalPrice.textContent = total.toFixed(2);
+}
+
+// Показать/скрыть корзину
+function toggleCart() {
+    const modal = document.getElementById('cart-modal');
+    modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
+}
+
+function closeCart() {
+    document.getElementById('cart-modal').style.display = 'none';
+}
+
+// Очистка корзины
+function clearCart() {
+    cart = [];
+    updateCart();
+    showNotification('Корзина очищена!');
+}
+
+// Уведомление
+function showNotification(message) {
+    const notification = document.createElement('div');
+    notification.style.cssText = `
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        z-index: 1000;
+    `;
+    notification.textContent = message;
+    document.body.appendChild(notification);
+    
+    setTimeout(() => {
+        notification.remove();
+    }, 2000);
+}
+
+// Сохранение корзины в LocalStorage (дополнительно)
+function saveCart() {
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+function loadCart() {
+    const savedCart = localStorage.getItem('cart');
+    if (savedCart) {
+        cart = JSON.parse(savedCart);
+        updateCart();
+    }
+}
+
+// Загружаем корзину при загрузке страницы
+document.addEventListener('DOMContentLoaded', loadCart);
+    </script>
 </body>
 </html>
