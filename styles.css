@@ -169,3 +169,9 @@ main{
     flex-wrap: wrap;
     padding: 20px;
 }
+.cart-content{
+    color: aliceblue;
+}
+#cart-count{
+    color: aliceblue;
+}
