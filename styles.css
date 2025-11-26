@@ -24,6 +24,25 @@ body{
     display: flex;
     margin-right:0;
 }
+.links_btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;    
+}
+.bt button{
+    margin-right: 40px;
+    width: 90px;
+    border-radius: 20%;
+    border: 0;
+    background-color:#2d2481;
+    font-size: medium;
+    transition: transform(0.5s) ease;
+    color: aliceblue;
+}
+.bt button:hover{
+    transform: scale(1.1);
+    background-color: #6459c273;
+}
 main{
     display: flex;
     justify-content: center;
@@ -31,16 +50,12 @@ main{
 }
 .main_container{
     width: 70%;
-    height: auto;
-    background-color: rgb(83, 114, 146);
+    height: 100vh;
+    background-color: dodgerblue;
 }
-#BF{
-    width: 100%;
-}
-.links ul{
+.links{
     display: flex;
     flex-direction: row;
-    padding: 10px;  
 }
 .game_box {
     width: 300px;
@@ -49,11 +64,11 @@ main{
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     overflow: hidden;
     font-family: Arial, sans-serif;
-    transition: transform 0.3s ease;
+    transition: transform(0.5s);
 }
 
 .game_box:hover {
-    transform: translateY(-5px);
+    transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
