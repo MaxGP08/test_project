@@ -156,7 +156,7 @@ main{
     cursor: pointer;
     transition: background 0.3s ease;
     display: flex;
-    ju
+    
 }
 
 .buy_btn:hover {
@@ -174,4 +174,42 @@ main{
 }
 #cart-count{
     color: aliceblue;
+}
+.footer{
+    height:auto;
+    background-color: #333;
+}
+#loadData {
+    padding: 12px 24px;
+    background: #2c5aa0;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 15px;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+#loadData:hover {
+    background: #1e3d6f;
+}
+
+#output {
+    padding: 20px;
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: #333;
+    border-radius: 8px;
+    min-height: 100px;
+}
+
+#output li {
+    margin-top: 0;
+    display: inline-block;
+    color: #ffffff;
+    margin-right: 15px;
+    padding-bottom: 10px;
 }
