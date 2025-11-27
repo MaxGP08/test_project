@@ -175,7 +175,6 @@ function addToCart(name, price) {
         existingItem.quantity += 1;
     } else {
         cart.push({
-            name: name,
             price: price,
             quantity: 1
         });
@@ -215,7 +214,7 @@ function updateCart() {
 function toggleCart() {
     const modal = document.getElementById('cart-modal');
     const btn = document.getElementById('btn-sign');
-    modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
+    modal.style.display = modal.style.display === 'block';
 }
 
 function closeCart() {
