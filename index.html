@@ -9,12 +9,13 @@
 <body>
     <header>
         <div class="head">
-            <div class="title">
-                <h1 id="st">Steam</h1>
-            </div>
             <div class="bt" id="btn-sign">
                 <button>Войти</button>
             </div>
+            <div class="title">
+                <h1 id="st">Steam</h1>
+            </div>
+            
             <div id="cart-modal" class="cart-modal">
                 <div class="cart-icon" onclick="toggleCart()">
             🛒      <span id="cart-count">0</span>
@@ -201,6 +202,8 @@ function updateCart() {
             <span>${item.name}</span>
             <span>${item.quantity} x ${item.price}руб</span>
         `;
+        document.getElementById('cart-items').style.display = 'none';
+
         cartItems.appendChild(itemElement);
     });
     
