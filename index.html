@@ -22,7 +22,7 @@
                 <div class="cart-content">
                     <h3>Корзина</h3>
                     <div id="cart-items"></div>
-                    <div class="cart-total">Итого: $<span id="total-price">0</span></div>
+                    <div class="cart-total">Итого: <span id="total-price">0 </span>руб</div>
                     <button onclick="closeCart()">Закрыть</button>
                     <button onclick="clearCart()">Очистить корзину</button>
                 </div>
@@ -45,7 +45,7 @@
            <div class="games_container">
                 <div class="game_box">
                     <div class="game_image">
-                        <img src="https://via.placeholder.com/300x200" alt="Ready or Not">
+                        <img src="header.jpg" alt="Ready or Not">
                     </div>
                     <div class="game_content">
                         <h3 class="game_title">Ready or Not</h3>
@@ -56,9 +56,9 @@
                         </button>
                     </div>
                 </div>
-                                <div class="game_box">
+                <div class="game_box">
                     <div class="game_image">
-                        <img src="https://via.placeholder.com/300x200" alt="Detroit: Become Human">
+                        <img src="header (1).jpg" alt="Detroit: Become Human">
                     </div>
                     <div class="game_content">
                         <h3 class="game_title">Detroit: Become Human</h3>
@@ -69,15 +69,85 @@
                         </button>
                     </div>
                 </div>
-                                <div class="game_box">
+                <div class="game_box">
                     <div class="game_image">
-                        <img src="https://via.placeholder.com/300x200" alt="Cyberpunk 2077">
+                        <img src="header (4).jpg" alt="Cyberpunk 2077">
                     </div>
                     <div class="game_content">
                         <h3 class="game_title">Dispatch</h3>
                         <p class="game_description">Комедия о рабочем месте супергероев, в которой ваш выбор имеет значение.</p>
                         <div class="game_price">1100 руб.</div>
+                        <div class="empty"></div>
                         <button class="buy_btn" onclick="addToCart('Dispatch', 1100),toggleCart()" >
+                            Добавить в корзину
+                        </button>
+                    </div>
+                </div>
+                <div class="game_box">
+                    <div class="game_image">
+                        <img src="header (3).jpg" alt="Cyberpunk 2077">
+                    </div>
+                    <div class="game_content">
+                        <h3 class="game_title">Solo Leveling: ARISE OVERDRIVE</h3>
+                        <p class="game_description">Вебтун с 14,3 миллиарда просмотров по всему миру, стал RPG-игрой в жанре экшен!</p>
+                        <div class="game_price">2399 руб.</div>
+                        <div class="empty4"></div>
+                        <button class="buy_btn" onclick="addToCart('Solo Leveling: ARISE OVERDRIVE', 2399),toggleCart()" >
+                            Добавить в корзину
+                        </button>
+                    </div>
+                </div>
+                <div class="game_box">
+                    <div class="game_image">
+                        <img src="header (2).jpg" alt="Cyberpunk 2077">
+                    </div>
+                    <div class="game_content">
+                        <h3 class="game_title">DARK SOULS™ III</h3>
+                        <p class="game_description">Dark Souls продолжит испытывать игроков на прочность в новой главе знаменитой серии.</p>
+                        <div class="game_price"><h1>-50%</h1>   ̶2̶3̶9̶9̶ ̶р̶у̶б̶.̶ <p>1199 руб.</p></div>
+                        <div class="empty3"></div>
+                        <button class="buy_btn" onclick="addToCart('DARK SOULS™ III', 1199),toggleCart()" >
+                            Добавить в корзину
+                        </button>
+                    </div>
+                </div>           
+                <div class="game_box">
+                    <div class="game_image">
+                        <img src="header (6).jpg" alt="Cyberpunk 2077">
+                    </div>
+                    <div class="game_content">
+                        <h3 class="game_title">Dota 2</h3>
+                        <p class="game_description">Ежедневно миллионы игроков по всему миру сражаются от лица одного из более сотни героев Dota 2, и даже после тысячи часов в ней есть чему научиться.</p>
+                        <div class="game_price">Бесплатно</div>
+                        <div class="empty2"></div>
+                        <button class="buy_btn" onclick="addToCart('Dota 2', 0),toggleCart()" >
+                            Добавить в корзину
+                        </button>
+                    </div>
+                </div>
+                <div class="game_box">
+                    <div class="game_image">
+                        <img src="header (5).jpg" alt="Cyberpunk 2077">
+                    </div>
+                    <div class="game_content">
+                        <h3 class="game_title">Counter-Strike 2</h3>
+                        <p class="game_description">Более двух десятилетий Counter-Strike служит примером первоклассной соревновательной игры.</p>
+                        <div class="game_price">Бесплатно</div>
+                        <div class="empty1"></div>
+                        <button class="buy_btn" onclick="addToCart('Counter-Strike 2', 0),toggleCart()" >
+                            Добавить в корзину
+                        </button>
+                    </div>
+                </div>
+                <div class="game_box">
+                    <div class="game_image">
+                        <img src="header_alt_assets_9_russian.jpg" alt="Cyberpunk 2077">
+                    </div>
+                    <div class="game_content">
+                        <h3 class="game_title">Warhammer 40,000: Space Marine 2</h3>
+                        <p class="game_description">Комедия о рабочем месте супергероев, в которой ваш выбор имеет значение.</p>
+                        <div class="game_price"><h1>-60%</h1>   ̶ ̶3̶1̶9̶9̶ ̶р̶у̶б̶.̶<p>1279 руб.</p></div>
+                        <button class="buy_btn" onclick="addToCart('Warhammer 40,000: Space Marine 2h', 1279),toggleCart()" >
                             Добавить в корзину
                         </button>
                     </div>
@@ -123,7 +193,7 @@ function updateCart() {
         itemElement.className = 'cart-item';
         itemElement.innerHTML = `
             <span>${item.name}</span>
-            <span>${item.quantity} x $${item.price}</span>
+            <span>${item.quantity} x ${item.price}руб</span>
         `;
         cartItems.appendChild(itemElement);
     });
